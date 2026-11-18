@@ -1,25 +1,42 @@
-# REM Program Builder — full public test demo
+# REM Program Builder — QA-preview public demo
 
-The GitHub version is a complete **31-resource, seven-section demo**. It is intentionally **sample-only**: the original documents are not published in this public repository.
+This repository contains a **public, sample-only** browser version of the REM Program Builder. It is for user-interface and ZIP workflow testing, **not** an approved distribution of NewFoS forms or sensitive participant information.
 
-## Test the app
+## Scope and approval status
 
-Open `index.html` directly, or deploy this repository through GitHub Pages (Settings → Pages → Deploy from branch `main` / root).
+- **22** resource entries from the earlier staging demo retain their single-home placements and preset memberships.
+- **9** newly reviewed resources are included as **proposals**; their original terms, cohort dates, payments, and program ownership still require review. The proposed entries are flagged in `catalog.json`.
+- Test counts: **Full REM 31**, **Summer Only 25**, **Research Placement 16**; the nine additions' preset membership was assigned for pilot testing and is **not** the program team's approved final configuration.
+- **Custom** supports file-level inclusion/exclusion. A preset with one file removed becomes Custom from that preset.
+- **7** sections / **28** defined components, with empty components hidden from the active picker.
+- The 3 repeated upload sources (offer letter, bootcamp schedule, summer calendar) were not duplicated.
+- The 4 excluded red/orange checklist items were not added.
+- The **full** “See how NewFoS ran it” walkthrough is restored: Full 6 slides, Summer 5, Placement 2.
 
-- Full REM: **31** unique files
-- Summer Only: **25** files
-- Research Placement: **16** files
-- Custom: choose any individual files, including removing one from a preset
-- Includes search, package preview with canonical ZIP paths, save/resume draft, bootcamp overview, and downloadable ZIPs.
-- All generated DOCX/XLSX/PDF files are syntactically valid *fictional samples* that can be opened and inspected.
-- Check the catalog in `catalog.json`; metadata tests: `node --test tests/catalog.test.mjs`.
+## How to test
 
-## Scope and safeguards
+The project is a standalone HTML app with no third-party runtime dependencies. Open `index.html` in a browser or publish from GitHub Pages on `main` / root.
 
-Catalog = 22 prior unique resource rows + 9 newly reviewed additions. The three repeated offer-letter/bootcamp/calendar sources were not added again. Four red/orange checklist additions were excluded.
+1. Select Full / Summer / Placement and review the file count and navigation sections.
+2. Switch to Custom or remove a single file from a preset; confirm only the desired items remain.
+3. Use Search; check the Review package list and canonical ZIP folder locations.
+4. Download each preset and a custom package; unzip and open the fictional DOCX, XLSX and PDF samples.
+5. Use Save draft, refresh the page, and use Resume draft.
+6. Open "See how NewFoS ran it" and navigate to the last slide for each preset.
 
-The ERN 2027 conference materials are **event-specific examples**, not universal deadlines. Approval is still needed before distributing real agreements, the financial workbook, mentoring syllabus, conference dates, and program-specific student materials.
+Automated regression checks run with `node --test tests/*.test.mjs` and through the GitHub Actions "REM Builder QA" workflow. **Automated validation does not replace checking the published GitHub Pages UI in a real browser.**
 
-**Do not commit actual participant, financial, host agreement or other restricted source documents to this public repo.** Use an explicitly approved private distribution workflow for originals. Real source files have not been copied here.
+## Never treat demo downloads as real program material
 
-Pending resources such as roles-and-decisions governance and academic-year seminar planning have not been represented as approved content.
+All generated files are **fictional, marked SAMPLE ONLY** and created in the browser. The source documents (including host/student agreements, participant details, financial workbook, original event guides and other controlled assets) are **not** included in this public repository.
+
+Release blockers for actual document distribution include: program-owner review of host/student agreement language, consent and year; financial workbook amounts/participant information/housing notes; mentor syllabus placeholders; conflicting storyboard dates; summer presentation timing; and ERN 2027 conference dates/deadlines. The ERN documents are **event-specific examples** (not generic conference guidance).
+
+The following resource gaps remain: a governance Roles and Decisions template, academic-year seminar planner, and complete workflow checklists where the program team still requires them. The checklist's proposed rename of Project Intake to Project Development and any separately emailed form also need reconciliation before real-file publication.
+
+## Maintainer notes
+
+- `catalog.json` is the human-readable mirror of the embedded browser catalog; keep them synchronized.
+- `index.html` contains the application logic, catalog, slides and browser-generated fictional samples.
+- `tests/` holds the catalog and interaction/ZIP regression checks.
+- Do not commit real or restricted source files to this public repository.
