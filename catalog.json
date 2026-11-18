@@ -1,0 +1,677 @@
+{
+  "phases": [
+    {
+      "id": "design",
+      "number": "01",
+      "name": "Program design"
+    },
+    {
+      "id": "recruitment",
+      "number": "02",
+      "name": "Recruitment"
+    },
+    {
+      "id": "selection",
+      "number": "03",
+      "name": "Selection"
+    },
+    {
+      "id": "before",
+      "number": "04",
+      "name": "Before the program"
+    },
+    {
+      "id": "summer",
+      "number": "05",
+      "name": "Summer experience"
+    },
+    {
+      "id": "academic",
+      "number": "06",
+      "name": "Academic year"
+    },
+    {
+      "id": "assessment",
+      "number": "07",
+      "name": "Assessment"
+    }
+  ],
+  "modules": [
+    {
+      "id": "purpose",
+      "phase": "Program design",
+      "name": "Purpose & scope",
+      "summary": "Select and review the purpose & scope resources."
+    },
+    {
+      "id": "governance",
+      "phase": "Program design",
+      "name": "Governance",
+      "summary": "Select and review the governance resources."
+    },
+    {
+      "id": "projects",
+      "phase": "Program design",
+      "name": "Project design",
+      "summary": "Select and review the project design resources."
+    },
+    {
+      "id": "mentor-model",
+      "phase": "Program design",
+      "name": "Mentor model",
+      "summary": "Select and review the mentor model resources."
+    },
+    {
+      "id": "advertise",
+      "phase": "Recruitment",
+      "name": "Program outreach",
+      "summary": "Select and review the program outreach resources."
+    },
+    {
+      "id": "application",
+      "phase": "Recruitment",
+      "name": "Student application",
+      "summary": "Select and review the student application resources."
+    },
+    {
+      "id": "project-intake",
+      "phase": "Recruitment",
+      "name": "Project intake",
+      "summary": "Select and review the project intake resources."
+    },
+    {
+      "id": "review",
+      "phase": "Selection",
+      "name": "Application review",
+      "summary": "Select and review the application review resources."
+    },
+    {
+      "id": "matching",
+      "phase": "Selection",
+      "name": "Student–project matching",
+      "summary": "Select and review the student–project matching resources."
+    },
+    {
+      "id": "offers",
+      "phase": "Selection",
+      "name": "Offers & acceptance",
+      "summary": "Select and review the offers & acceptance resources."
+    },
+    {
+      "id": "contracts",
+      "phase": "Before the program",
+      "name": "Agreements & contracts",
+      "summary": "Select and review the agreements & contracts resources."
+    },
+    {
+      "id": "logistics",
+      "phase": "Before the program",
+      "name": "Program logistics",
+      "summary": "Select and review the program logistics resources."
+    },
+    {
+      "id": "mentor-training",
+      "phase": "Before the program",
+      "name": "Mentor training",
+      "summary": "Select and review the mentor training resources."
+    },
+    {
+      "id": "onboarding",
+      "phase": "Before the program",
+      "name": "Participant onboarding",
+      "summary": "Select and review the participant onboarding resources."
+    },
+    {
+      "id": "bootcamp",
+      "phase": "Summer experience",
+      "name": "Research bootcamp",
+      "summary": "Select and review the research bootcamp resources."
+    },
+    {
+      "id": "research",
+      "phase": "Summer experience",
+      "name": "Research experience",
+      "summary": "Select and review the research experience resources."
+    },
+    {
+      "id": "professional-development",
+      "phase": "Summer experience",
+      "name": "Professional development",
+      "summary": "Select and review the professional development resources."
+    },
+    {
+      "id": "meetings",
+      "phase": "Summer experience",
+      "name": "Cohort meetings",
+      "summary": "Select and review the cohort meetings resources."
+    },
+    {
+      "id": "troubleshooting",
+      "phase": "Summer experience",
+      "name": "Troubleshooting & support",
+      "summary": "Select and review the troubleshooting & support resources."
+    },
+    {
+      "id": "seminars",
+      "phase": "Academic year",
+      "name": "Seminar series",
+      "summary": "Select and review the seminar series resources."
+    },
+    {
+      "id": "mentoring",
+      "phase": "Academic year",
+      "name": "Ongoing mentoring",
+      "summary": "Select and review the ongoing mentoring resources."
+    },
+    {
+      "id": "deliverables",
+      "phase": "Academic year",
+      "name": "Research deliverables",
+      "summary": "Select and review the research deliverables resources."
+    },
+    {
+      "id": "conference",
+      "phase": "Academic year",
+      "name": "Research conference",
+      "summary": "Select and review the research conference resources."
+    },
+    {
+      "id": "stipends",
+      "phase": "Academic year",
+      "name": "Stipends & administration",
+      "summary": "Select and review the stipends & administration resources."
+    },
+    {
+      "id": "student-assessment",
+      "phase": "Assessment",
+      "name": "Student assessment",
+      "summary": "Select and review the student assessment resources."
+    },
+    {
+      "id": "surveys",
+      "phase": "Assessment",
+      "name": "Surveys & feedback",
+      "summary": "Select and review the surveys & feedback resources."
+    },
+    {
+      "id": "program-evaluation",
+      "phase": "Assessment",
+      "name": "Program evaluation",
+      "summary": "Select and review the program evaluation resources."
+    },
+    {
+      "id": "improvement",
+      "phase": "Assessment",
+      "name": "Continuous improvement",
+      "summary": "Select and review the continuous improvement resources."
+    }
+  ],
+  "assets": [
+    {
+      "id": "outreach-guide",
+      "moduleId": "advertise",
+      "fileName": "Recruitment_and_Outreach_Guide.docx",
+      "title": "Recruitment and outreach guide",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "DOCX",
+      "packagePath": "02 Recruitment/Program outreach/Recruitment_and_Outreach_Guide.docx",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": true,
+        "placement": false
+      }
+    },
+    {
+      "id": "recruitment-funnel",
+      "moduleId": "advertise",
+      "fileName": "Recruitment_Funnel_Tracker.xlsx",
+      "title": "Recruitment funnel tracker",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "XLSX",
+      "packagePath": "02 Recruitment/Program outreach/Recruitment_Funnel_Tracker.xlsx",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": true,
+        "placement": false
+      }
+    },
+    {
+      "id": "application-spec",
+      "moduleId": "application",
+      "fileName": "REM_Application_Master_Spec.docx",
+      "title": "Application master specification",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "DOCX",
+      "packagePath": "02 Recruitment/Student application/REM_Application_Master_Spec.docx",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": true,
+        "placement": true
+      }
+    },
+    {
+      "id": "eligibility-data",
+      "moduleId": "application",
+      "fileName": "Applicant_Eligibility_and_Data_Sheet.xlsx",
+      "title": "Applicant eligibility and data sheet",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "XLSX",
+      "packagePath": "02 Recruitment/Student application/Applicant_Eligibility_and_Data_Sheet.xlsx",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": true,
+        "placement": true
+      }
+    },
+    {
+      "id": "application-build",
+      "moduleId": "application",
+      "fileName": "Application_Build_Template.xlsx",
+      "title": "Application build template",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "XLSX",
+      "packagePath": "02 Recruitment/Student application/Application_Build_Template.xlsx",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": true,
+        "placement": true
+      }
+    },
+    {
+      "id": "minor-planning",
+      "moduleId": "application",
+      "fileName": "Minor_Participant_Planning_Guide.docx",
+      "title": "Minor participant planning guide",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "DOCX",
+      "packagePath": "02 Recruitment/Student application/Minor_Participant_Planning_Guide.docx",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": true,
+        "placement": true
+      }
+    },
+    {
+      "id": "selection-guide",
+      "moduleId": "review",
+      "fileName": "Selection_and_Matching_Guide.docx",
+      "title": "Selection and matching guide",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "DOCX",
+      "packagePath": "03 Selection/Application review/Selection_and_Matching_Guide.docx",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": true,
+        "placement": true
+      }
+    },
+    {
+      "id": "review-scoring",
+      "moduleId": "review",
+      "fileName": "Application_Review_and_Scoring_Workbook.xlsx",
+      "title": "Application review and scoring workbook",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "XLSX",
+      "packagePath": "03 Selection/Application review/Application_Review_and_Scoring_Workbook.xlsx",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": true,
+        "placement": true
+      }
+    },
+    {
+      "id": "matching-offers",
+      "moduleId": "matching",
+      "fileName": "Student_Project_Matching_and_Offer_Tracker.xlsx",
+      "title": "Matching and offer tracker",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "XLSX",
+      "packagePath": "03 Selection/Student–project matching/Student_Project_Matching_and_Offer_Tracker.xlsx",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": true,
+        "placement": true
+      }
+    },
+    {
+      "id": "project-readiness",
+      "moduleId": "project-intake",
+      "fileName": "Project_Readiness_and_Intake.docx",
+      "title": "Project readiness and intake",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "DOCX",
+      "packagePath": "02 Recruitment/Project intake/Project_Readiness_and_Intake.docx",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": true,
+        "placement": true
+      }
+    },
+    {
+      "id": "prearrival-access",
+      "moduleId": "onboarding",
+      "fileName": "Participant_Pre_Arrival_and_Access_Checklist.xlsx",
+      "title": "Pre-arrival and access checklist",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "XLSX",
+      "packagePath": "04 Before the program/Participant onboarding/Participant_Pre_Arrival_and_Access_Checklist.xlsx",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": true,
+        "placement": true
+      }
+    },
+    {
+      "id": "mentor-roles",
+      "moduleId": "mentor-model",
+      "fileName": "Research_Mentor_Roles_and_Responsibilities_Guide.docx",
+      "title": "Research mentor roles and responsibilities",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "DOCX",
+      "packagePath": "01 Program design/Mentor model/Research_Mentor_Roles_and_Responsibilities_Guide.docx",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": true,
+        "placement": true
+      }
+    },
+    {
+      "id": "progress-conversation",
+      "moduleId": "mentoring",
+      "fileName": "Research_Progress_Conversation_Guide.docx",
+      "title": "Research progress conversation guide",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "DOCX",
+      "packagePath": "06 Academic year/Ongoing mentoring/Research_Progress_Conversation_Guide.docx",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": true,
+        "placement": true
+      }
+    },
+    {
+      "id": "summer-calendar",
+      "moduleId": "logistics",
+      "fileName": "Summer_Program_Master_Calendar.xlsx",
+      "title": "Summer program master calendar",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "XLSX",
+      "packagePath": "04 Before the program/Program logistics/Summer_Program_Master_Calendar.xlsx",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": true,
+        "placement": true
+      }
+    },
+    {
+      "id": "bootcamp-guide",
+      "moduleId": "bootcamp",
+      "fileName": "Research_Bootcamp_Coordinator_Guide.docx",
+      "title": "Research bootcamp coordinator guide",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "DOCX",
+      "packagePath": "05 Summer experience/Research bootcamp/Research_Bootcamp_Coordinator_Guide.docx",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": true,
+        "placement": false
+      }
+    },
+    {
+      "id": "attendance-tracker",
+      "moduleId": "meetings",
+      "fileName": "Attendance_and_Participation_Tracker.xlsx",
+      "title": "Attendance and participation tracker",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "XLSX",
+      "packagePath": "05 Summer experience/Cohort meetings/Attendance_and_Participation_Tracker.xlsx",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": true,
+        "placement": true
+      }
+    },
+    {
+      "id": "pd-session-planner",
+      "moduleId": "professional-development",
+      "fileName": "Professional_Development_Session_Planner.docx",
+      "title": "Professional development session planner",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "DOCX",
+      "packagePath": "05 Summer experience/Professional development/Professional_Development_Session_Planner.docx",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": true,
+        "placement": false
+      }
+    },
+    {
+      "id": "evaluation-plan",
+      "moduleId": "program-evaluation",
+      "fileName": "Program_Evaluation_Plan_and_Calendar.xlsx",
+      "title": "Program evaluation plan and calendar",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "XLSX",
+      "packagePath": "07 Assessment/Program evaluation/Program_Evaluation_Plan_and_Calendar.xlsx",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": true,
+        "placement": false
+      }
+    },
+    {
+      "id": "annual-debrief",
+      "moduleId": "improvement",
+      "fileName": "Annual_Program_Debrief_Discussion_Guide.docx",
+      "title": "Annual program debrief discussion guide",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "DOCX",
+      "packagePath": "07 Assessment/Continuous improvement/Annual_Program_Debrief_Discussion_Guide.docx",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": false,
+        "placement": false
+      }
+    },
+    {
+      "id": "change-log",
+      "moduleId": "improvement",
+      "fileName": "Change_Log_and_Next_Cycle_Planning_Template.xlsx",
+      "title": "Change log and next-cycle planning template",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "XLSX",
+      "packagePath": "07 Assessment/Continuous improvement/Change_Log_and_Next_Cycle_Planning_Template.xlsx",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": false,
+        "placement": false
+      }
+    },
+    {
+      "id": "participant-offer-letter",
+      "moduleId": "offers",
+      "fileName": "REM_Participant_Offer_Letter_Template.docx",
+      "title": "REM participant offer letter template",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "DOCX",
+      "packagePath": "03 Selection/Offers & acceptance/REM_Participant_Offer_Letter_Template.docx",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": false,
+        "placement": false
+      }
+    },
+    {
+      "id": "sample-bootcamp-schedule",
+      "moduleId": "bootcamp",
+      "fileName": "Sample_Research_Bootcamp_Schedule.pdf",
+      "title": "Sample research bootcamp schedule",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "PDF",
+      "packagePath": "05 Summer experience/Research bootcamp/Sample_Research_Bootcamp_Schedule.pdf",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": true,
+        "placement": false
+      }
+    },
+    {
+      "id": "host-agreement",
+      "moduleId": "contracts",
+      "fileName": "Host_Site_Agreement_NewFoS_REM_2025.docx",
+      "title": "Host site agreement example",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "DOCX",
+      "packagePath": "04 Before the program/Agreements & contracts/Host_Site_Agreement_NewFoS_REM_2025.docx",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": true,
+        "placement": true
+      }
+    },
+    {
+      "id": "student-contract",
+      "moduleId": "contracts",
+      "fileName": "NewFoS_REM_Program_Student_Contract.docx",
+      "title": "Student contract example",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "DOCX",
+      "packagePath": "04 Before the program/Agreements & contracts/NewFoS_REM_Program_Student_Contract.docx",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": true,
+        "placement": true
+      }
+    },
+    {
+      "id": "mentor-syllabus",
+      "moduleId": "mentor-training",
+      "fileName": "NewFoS_Student_Centered_Leadership_Mentoring_Skills_Syllabus.docx",
+      "title": "Mentor training syllabus",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "DOCX",
+      "packagePath": "04 Before the program/Mentor training/NewFoS_Student_Centered_Leadership_Mentoring_Skills_Syllabus.docx",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": true,
+        "placement": true
+      }
+    },
+    {
+      "id": "financial-business",
+      "moduleId": "stipends",
+      "fileName": "REM_Financial_and_Business_Document.xlsx",
+      "title": "Financial and business workbook",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "XLSX",
+      "packagePath": "06 Academic year/Stipends & administration/REM_Financial_and_Business_Document.xlsx",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": true,
+        "placement": false
+      }
+    },
+    {
+      "id": "summer-storyboard",
+      "moduleId": "deliverables",
+      "fileName": "Create-Your-Summer-Storyboard.pdf",
+      "title": "Summer storyboard guide",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "PDF",
+      "packagePath": "06 Academic year/Research deliverables/Create-Your-Summer-Storyboard.pdf",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": true,
+        "placement": false
+      }
+    },
+    {
+      "id": "research-presentation",
+      "moduleId": "deliverables",
+      "fileName": "NewFoS-Research-Presentation-Planner.pdf",
+      "title": "Research presentation planner",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "PDF",
+      "packagePath": "06 Academic year/Research deliverables/NewFoS-Research-Presentation-Planner.pdf",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": true,
+        "placement": false
+      }
+    },
+    {
+      "id": "ern-abstract",
+      "moduleId": "conference",
+      "fileName": "ERN27_Abstract_Submission_Guidelines_Final.pdf",
+      "title": "ERN 2027 abstract submission guidelines",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "PDF",
+      "packagePath": "06 Academic year/Research conference/ERN27_Abstract_Submission_Guidelines_Final.pdf",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": false,
+        "placement": false
+      }
+    },
+    {
+      "id": "ern-poster",
+      "moduleId": "conference",
+      "fileName": "ERN27_Poster_Presentation_Guidelines.pdf",
+      "title": "ERN 2027 poster guidelines",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "PDF",
+      "packagePath": "06 Academic year/Research conference/ERN27_Poster_Presentation_Guidelines.pdf",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": false,
+        "placement": false
+      }
+    },
+    {
+      "id": "ern-oral",
+      "moduleId": "conference",
+      "fileName": "ERN27_Oral_Presentation_Guidelines.pdf",
+      "title": "ERN 2027 oral guidelines",
+      "description": "Fictional sample only. Confirm current program terms, dates and approvals before any official use.",
+      "format": "PDF",
+      "packagePath": "06 Academic year/Research conference/ERN27_Oral_Presentation_Guidelines.pdf",
+      "available": true,
+      "presets": {
+        "full": true,
+        "summer": false,
+        "placement": false
+      }
+    }
+  ],
+  "revision": "public-demo-31-nov-2026"
+}

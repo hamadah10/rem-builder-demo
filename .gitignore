@@ -1,0 +1,4 @@
+private/
+real-source-documents/
+*.env
+.DS_Store
