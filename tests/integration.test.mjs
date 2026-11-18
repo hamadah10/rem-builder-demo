@@ -151,12 +151,12 @@ test('complete original walkthroughs navigate to last slide',()=>{
   assert.equal(a.el('next-slide').disabled,true,kind);
  }
 });
-test('ZIPs contain correct names, CRCs and readable-format fictional samples',()=>{
+test('ZIPs contain correct names, CRCs and readable-format fictional samples',async()=>{
  const a=app();
  for(const [kind,n] of [['full',31],['summer',25],['placement',16]]){
   a.mode(kind).click();a.el('review').click();a.el('download').click();
   const blob=a.blobs.at(-1);
-  const zip=unzipStored(blob.parts[0]);
+  const zip=unzipStored(new Uint8Array(await blob.arrayBuffer()));
   assert.equal(zip.length,n,kind);
   const expected=new Set(catalog.assets.filter(asset=>asset.presets[kind]).map(asset=>asset.packagePath));
   assert.deepEqual(new Set(zip.map(entry=>entry.name)),expected);
