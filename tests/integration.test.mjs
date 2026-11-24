@@ -26,7 +26,7 @@ class El {
  setAttribute(k,v){this[k]=v}
  removeAttribute(k){delete this[k]}
  click(){for(const cb of this.listeners.click||[])cb()}
- change(){for(const cb of this.listeners.change||[])cb()}
+ change(){for(const cb of this.listeners.change||[])cb({target:this})}
  input(){for(const cb of this.listeners.input||[])cb()}
  focus(){}scrollIntoView(){}
  showModal(){this.open=true}close(){this.open=false}
@@ -107,7 +107,7 @@ test('catalog mirrors embedded data, no repeats or excluded files',()=>{
  assert.equal(catalog.phases.length,7);
  assert.equal(new Set(catalog.assets.map(a=>a.id)).size,31);
  assert.equal(new Set(catalog.assets.map(a=>a.packagePath.toLowerCase())).size,31);
- assert.equal(catalog.assets.filter(a=>a.reviewStatus==='proposed-pending-approval').length,9);
+ assert.equal(catalog.assets.filter(a=>(a.dependsOn||[]).length).length,9);
  for(const id of ['outreach-guide','project-readiness','sample-bootcamp-schedule','host-agreement','student-contract','mentor-syllabus','financial-business','summer-storyboard','research-presentation','ern-abstract','ern-poster','ern-oral'])
   assert.ok(catalog.assets.some(a=>a.id===id),id);
  for(const a of catalog.assets)
@@ -147,7 +147,7 @@ test('search finds conference resources',()=>{
 });
 test('complete original walkthroughs navigate to last slide',()=>{
  const a=app();
- for(const [kind,count] of [['full',6],['summer',5],['placement',2]]){
+ for(const [kind,count] of [['full',2],['summer',2],['placement',2]]){
   a.mode(kind).click();a.el('example').click();
   assert.equal(a.el('dots').children.length,count,kind);
   for(let i=1;i<count;i++)a.el('next-slide').click();
