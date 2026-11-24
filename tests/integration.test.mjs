@@ -124,7 +124,10 @@ test('app starts and all presets show correct counts',()=>{
  }
 });
 test('file-level edit changes preset to custom and draft survives reload',()=>{
- const a=app(),checkbox=a.checkbox();
+ const a=app();
+ a.el('protect-dependencies').checked=false;
+ a.el('protect-dependencies').change();
+ const checkbox=a.checkbox();
  checkbox.checked=false;checkbox.change();
  assert.equal(a.el('side-count').textContent,'30 files');
  assert.equal(a.el('current-mode').textContent,'Custom — from Full REM');

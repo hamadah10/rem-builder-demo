@@ -1,42 +1,37 @@
-# REM Program Builder — QA-preview public demo
+# NewFoS REM Program Builder — Modern public demonstration
 
-This repository contains a **public, sample-only** browser version of the REM Program Builder. It is for user-interface and ZIP workflow testing, **not** an approved distribution of NewFoS forms or sensitive participant information.
+**Project Owner and Maintainer: Ahmed Alhamadah**
 
-## Scope and approval status
+This repository hosts the responsive, sample-only REM Program Builder. It retains NewFoS styling and the seven-section, 28-component catalog with **31 fictional document samples** (not official source documents). The public site is built from one self-contained `index.html` plus `catalog.json` for inspection.
 
-- **22** resource entries from the earlier staging demo retain their single-home placements and preset memberships.
-- **9** newly reviewed resources are included as **proposals**; their original terms, cohort dates, payments, and program ownership still require review. The proposed entries are flagged in `catalog.json`.
-- Test counts: **Full REM 31**, **Summer Only 25**, **Research Placement 16**; the nine additions' preset membership was assigned for pilot testing and is **not** the program team's approved final configuration.
-- **Custom** supports file-level inclusion/exclusion. A preset with one file removed becomes Custom from that preset.
-- **7** sections / **28** defined components, with empty components hidden from the active picker.
-- The 3 repeated upload sources (offer letter, bootcamp schedule, summer calendar) were not duplicated.
-- The 4 excluded red/orange checklist items were not added.
-- The **full** “See how NewFoS ran it” walkthrough is restored: Full 6 slides, Summer 5, Placement 2.
+## Using the builder
 
-## How to test
+1. Open `index.html` or visit the repository's GitHub Pages site if Pages is enabled.
+2. Choose Full REM (**31**), Summer Only (**25**), Research Placement (**16**) or Custom (**0** initially).
+3. Under **Keep related files together**, leave **Protect dependencies** checked (default) to maintain suggested companion-file links; uncheck it to add or remove any file independently.
+4. Search, browse by phase, expand a component and select files. A prerequisite shows **Protected — required by** while a selected file depends on it. A linked file added in protected mode automatically adds any missing prerequisites. To remove a prerequisite, first remove the files that use it or uncheck the protection control.
+5. Review the selected files and their canonical ZIP paths; save/resume drafts in the same browser; view example slides; download a valid-format, fictional DOCX/XLSX/PDF sample ZIP.
 
-The project is a standalone HTML app with no third-party runtime dependencies. Open `index.html` in a browser or publish from GitHub Pages on `main` / root.
+## Dependency map
 
-1. Select Full / Summer / Placement and review the file count and navigation sections.
-2. Switch to Custom or remove a single file from a preset; confirm only the desired items remain.
-3. Use Search; check the Review package list and canonical ZIP folder locations.
-4. Download each preset and a custom package; unzip and open the fictional DOCX, XLSX and PDF samples.
-5. Use Save draft, refresh the page, and use Resume draft.
-6. Open "See how NewFoS ran it" and navigate to the last slide for each preset.
+The nine `dependsOn` relationships are listed in `catalog.json` and explained in the interface. They are **suggested workflow/sequence relationships for the demonstration**, not owner-approved mandatory dependencies and **not a verified dependency audit of source-document internals**. The selection/scoring-to-matching handoff is based on the known cross-workbook process; all other links should be checked with the program owner before official release. The rules are configurable without changing file IDs or preset membership.
 
-Automated regression checks run with `node --test tests/*.test.mjs` and through the GitHub Actions "REM Builder QA" workflow. **Automated validation does not replace checking the published GitHub Pages UI in a real browser.**
+When protection is **ON**, the UI automatically adds missing prerequisites, blocks removing any prerequisite still needed by a selected file, and validates the package before downloading. When **OFF**, file selections are unrestricted. Incomplete suggested links are disclosed rather than silently repaired. The state is saved in browser drafts and restored; older drafts are migrated to protected mode safely.
 
-## Never treat demo downloads as real program material
+## Public-demo boundary and approvals
 
-All generated files are **fictional, marked SAMPLE ONLY** and created in the browser. The source documents (including host/student agreements, participant details, financial workbook, original event guides and other controlled assets) are **not** included in this public repository.
+- All downloads are **synthetic demo files**, clearly marked `SAMPLE ONLY`. **No actual agreement, financial worksheet, participant data, staff material, or restricted source file has been published**.
+- The three repeated offer-letter/bootcamp/calendar source files are not separate selectable items.
+- Four red/orange checklist additions remain excluded from this release.
+- The 2027 ERN conference guidance is event-specific, **not** an official calendar or reusable deadline list. Dates, compensation details, consent language, agreements, the mentor syllabus, and financial materials require owner review before any real-file distribution.
+- Google Apps Script, real Drive sources, distribution permissions, and non-Chromium physical devices are not part of this public-demo verification.
 
-Release blockers for actual document distribution include: program-owner review of host/student agreement language, consent and year; financial workbook amounts/participant information/housing notes; mentor syllabus placeholders; conflicting storyboard dates; summer presentation timing; and ERN 2027 conference dates/deadlines. The ERN documents are **event-specific examples** (not generic conference guidance).
+## Tests
 
-The following resource gaps remain: a governance Roles and Decisions template, academic-year seminar planner, and complete workflow checklists where the program team still requires them. The checklist's proposed rename of Project Intake to Project Development and any separately emailed form also need reconciliation before real-file publication.
+This release was verified with 26 groups of real Chromium browser tests and downloadable-file validation, including all 31 sample formats, all four presets/custom, all nine dependency edges, recursive links, on/off overrides, stale drafts, keyboard interaction, and five responsive screen widths.
 
-## Maintainer notes
+The repository's GitHub Actions workflow also runs `node --test tests/*.test.mjs` on push. See `QA_RELEASE.md` for the detailed scope and limitations.
 
-- `catalog.json` is the human-readable mirror of the embedded browser catalog; keep them synchronized.
-- `index.html` contains the application logic, catalog, slides and browser-generated fictional samples.
-- `tests/` holds the catalog and interaction/ZIP regression checks.
-- Do not commit real or restricted source files to this public repository.
+Acknowledgements: thanks to Grant Batchelder; recognition of New Frontiers of Sound (NewFoS) and the University of Arizona.
+
+© 2026 Ahmed Alhamadah. All rights reserved.

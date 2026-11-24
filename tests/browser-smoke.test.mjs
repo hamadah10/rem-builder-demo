@@ -21,6 +21,8 @@ const probe = `<script>
    e('slides-dialog').close();
    const check = document.querySelector('.file input[type="checkbox"]');
    if (!check) throw Error('Missing file checkbox');
+   e('protect-dependencies').checked=false;
+   e('protect-dependencies').dispatchEvent(new Event('change',{bubbles:true}));
    check.checked = false;
    check.dispatchEvent(new Event('change',{bubbles:true}));
    o.custom = e('side-count').textContent;
