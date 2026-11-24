@@ -35,3 +35,7 @@ The repository's GitHub Actions workflow also runs `node --test tests/*.test.mjs
 Acknowledgements: thanks to Grant Batchelder; recognition of New Frontiers of Sound (NewFoS) and the University of Arizona.
 
 © 2026 Ahmed Alhamadah. All rights reserved.
+
+## Detailed 'See how NewFoS ran it' walkthrough
+
+Restored the pre-redesign Full REM, Summer, and Research Placement stages, plus five topic-by-topic 2026 bootcamp day slides and specific fall/spring activity guidance. Historical student contract: average 35 hr/week during the eight-week summer, and 4 hr/week in fall and spring including seminars. Historical five-day bootcamp: each day had 4.5 hr shared instruction, 3 hr host time and 1 hr lunch. All activities are illustrative and must be reviewed for a future cohort; staff names, personal details and meeting links are not included.

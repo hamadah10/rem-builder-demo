@@ -147,7 +147,7 @@ test('search finds conference resources',()=>{
 });
 test('complete original walkthroughs navigate to last slide',()=>{
  const a=app();
- for(const [kind,count] of [['full',2],['summer',2],['placement',2]]){
+ for(const [kind,count] of [['full',15],['summer',11],['placement',3]]){
   a.mode(kind).click();a.el('example').click();
   assert.equal(a.el('dots').children.length,count,kind);
   for(let i=1;i<count;i++)a.el('next-slide').click();
