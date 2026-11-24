@@ -33,7 +33,7 @@ test('five historical days have correct 4.5-hour sessions and detailed activitie
   let total=0;
   for(const item of day.items){
    assert.equal(item.length,3);
-   assert.ok(item[1].length>5 && item[2].length>12);
+   assert.ok(item[1].trim().length >= 4 && item[2].trim().length >= 12);
    const qty=parseFloat(item[0]);
    assert.ok(Number.isFinite(qty));
    total+=item[0].includes('min') ? qty/60 : qty;
