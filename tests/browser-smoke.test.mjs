@@ -70,7 +70,7 @@ test('Real Chromium smoke: full UI startup and primary controls',{timeout:45000}
   assert.equal(o.full,'31 files');
   assert.equal(o.summer,'25 files');
   assert.equal(o.placement,'16 files');
-  assert.equal(o.slides,2);
+  assert.equal(o.slides,15);
   assert.equal(o.custom,'30 files');
   assert.equal(o.customLabel,'Custom — from Full REM');
   assert.equal(o.review,true);

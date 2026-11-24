@@ -222,13 +222,180 @@ function restoreRemDraft(raw, assets) {
     assets.some(a => idSet.has(a.id) && !a.available)};
 }
 
+const bootcampSlides = [
+  {tag:'WEEK 01  /  BOOTCAMP', title:'Five days to get research-ready', lead:'A shared start across sites, with time for local hosts to support their teams.',
+   items:[['Day 1','Welcome & foundations','Program orientation, field introduction and reading research.'],
+          ['Day 2','Project introductions','Materials, project overviews and citation methods.'],
+          ['Day 3','Research concepts & identity','Technical concepts, project demonstrations and a STEM identity activity.'],
+          ['Day 4','Technical practice','Foundations and hands-on computing tools.'],
+          ['Day 5','Apply & wrap up','Technical applications, group synthesis and next steps.']]},
+  {tag:'BOOTCAMP  /  DAILY RHYTHM',title:'4½ hours of shared instruction each day',
+   lead:'The 2026 example scheduled an 8½-hour local day at each site.',
+   items:[['4½ hr','Shared instruction','Scheduled sessions lasted 30 minutes to 2 hours.'],
+          ['3 hr','Local host time','Sites placed these blocks before, between or after shared sessions.'],
+          ['1 hr','Lunch','Each site used its own local lunch window.']]},
+];
+const summerRhythm = {tag:'WEEKS 02–08  /  TYPICAL WEEK',title:'Protect lab time and keep a cohort rhythm',
+  lead:'Research hours and meeting times varied by site. These recurring blocks were layered around lab work.',
+  items:[['Site-specific','Mentored research','Lab blocks, project team meetings and time for independent work.'],
+         ['Weekly','Mentor or lab check-in','Discuss progress, next steps and roadblocks.'],
+         ['~1 hr weekly','All-program meeting','Updates across sites and shared announcements.'],
+         ['90 min weekly','Professional development','Example topics: project management, science communication and career exploration.']]};
+const summerFinish = {tag:'WEEKS 06–08  /  SHARING RESULTS',title:'Build toward a final presentation',
+  lead:'In the last three weeks, students made time for posters and digital StoryMaps alongside research.',
+  items:[['Start','Draft','Set aside focused time to outline the poster and StoryMap.'],
+         ['Refine','Practice and revise','Rehearse, get feedback and update the materials.'],
+         ['Week 8','Present','Share the StoryMap and research results in the final week.']]};
+
+/* Full 2026-2027 program example. Fixed hours come from the historical student
+   contract; program owners must adjust requirements for a new cohort. */
+const preSummer2026 = {
+ tag:'BEFORE SUMMER  /  RECRUITMENT & READINESS',
+ title:'Recruit, match and prepare research students',
+ lead:'The 2026 NewFoS program linked outreach, coordinated selection and host readiness. Exact deadlines and approvals are local.',
+ items:[
+  ['Project planning','Define research opportunities','Hosts describe project goals, mentor availability, necessary skills and research readiness.'],
+  ['Recruitment','Applications and eligibility','Communicate opportunities, review application requirements and gather student project preferences.'],
+  ['Selection','Score and match','Review applications, compare student interests with research projects and coordinate host selection.'],
+  ['Offers','Confirm participation','Send approved offers, clarify agreements and communicate mentoring and program expectations.'],
+  ['Before arrival','Access and preparation','Arrange accounts, safety training, background primers, introductions and bootcamp logistics.']
+ ]
+};
+/* Historical five-day bootcamp schedule: sessions only; presenters, meeting
+   links, student names and cohort-specific Zoom data intentionally omitted. */
+const bootcampActivityDays = [
+ {tag:'BOOTCAMP  /  DAY 1  /  JUNE 1, 2026',
+  title:'Welcome, NewFoS foundations and reading',
+  lead:'4.5 hr shared instruction + 3 hr local host time + 1 hr lunch = 8.5 hr scheduled day. Historical example only.',
+  items:[
+   ['1 hr','Welcome and program orientation','Introduce REM expectations, the cohort and the research mentoring experience.'],
+   ['1 hr','Introduction to NewFoS','Explain the Center and its research context.'],
+   ['1 hr','Introduction to topological acoustics','Build a common vocabulary for the research themes.'],
+   ['1.5 hr','Reading fundamentals','Practice approaching and understanding research literature.']
+  ]},
+ {tag:'BOOTCAMP  /  DAY 2  /  JUNE 2, 2026',
+  title:'Research projects, materials and citation',
+  lead:'4.5 hr shared instruction; additional 3 hr host time and 1 hr lunch. Topics and lengths reflect the 2026 schedule.',
+  items:[
+   ['45 min','Introduction to materials science','Survey foundations used in center research.'],
+   ['45 min','Research project overview','Introduce another host research area and its goals.'],
+   ['1 hr','RF device project overview','Explore a radio-frequency research project.'],
+   ['1 hr','Chalcogenide phase-change materials','Introduce a second project and its material systems.'],
+   ['1 hr','Research versus coursework and citations','Review research practice and citation methods.']
+  ]},
+ {tag:'BOOTCAMP  /  DAY 3  /  JUNE 3, 2026',
+  title:'Geometric phase, quantum topics and STEM identity',
+  lead:'4.5 hr shared instruction; additional 3 hr host time and 1 hr lunch.',
+  items:[
+   ['1.5 hr','Geometric phase','Introduce the technical concept behind related projects.'],
+   ['30 min','Quantum project introduction','Present introductory ideas for the quantum research area.'],
+   ['30 min','Acoustic analog project','Introduce the acoustic analog research project.'],
+   ['2 hr','STEM identity activity','Explore STEM identity and professional development.']
+  ]},
+ {tag:'BOOTCAMP  /  DAY 4  /  JUNE 4, 2026',
+  title:'Technical foundations and MATLAB practice',
+  lead:'4.5 hr shared instruction; additional 3 hr host time and 1 hr lunch. One 2026 session was not yet assigned a final topic.',
+  items:[
+   ['1 hr','Oscillators','Fundamentals of topological acoustics: oscillatory systems.'],
+   ['1 hr','Waves','Fundamentals of wave behavior.'],
+   ['1 hr','Technical foundations — topic TBD','The historical source left this session unspecified; confirm the topic before reuse.'],
+   ['1.5 hr','MATLAB instruction','Guided practice with technical computing tools.']
+  ]},
+ {tag:'BOOTCAMP  /  DAY 5  /  JUNE 5, 2026',
+  title:'SSH models, applied concepts and closing',
+  lead:'4.5 hr shared instruction; additional 3 hr host time and 1 hr lunch.',
+  items:[
+   ['1 hr','SSH overview','Introduce the Su–Schrieffer–Heeger model in the topological acoustics context.'],
+   ['1 hr','SSH algebra','Study foundational algebra and interpretation.'],
+   ['1 hr','Additional topological acoustics concepts','Review concepts not covered in earlier sessions.'],
+   ['1.5 hr','Wrap-up and general meeting','Synthesize the week, exchange questions and prepare for lab research.']
+  ]}
+];
+const summerLearning = {
+ tag:'WEEKS 02–08  /  ACTIVITIES IN PRACTICE',
+ title:'What students did during a typical research week',
+ lead:'About 35 hr/week total research and program activities in the historical contract; individual lab and workshop schedules varied by site.',
+ items:[
+  ['Research blocks','Project and lab work','Read literature, plan methods, use lab or computing tools, collect or analyze evidence and document progress.'],
+  ['Weekly','Mentor or team check-ins','Review findings, questions, obstacles and next steps with the host mentor.'],
+  ['~1 hr weekly','Cross-site REM meeting','Share project updates, connect students across sites and handle program announcements.'],
+  ['90 min weekly','Professional development','Examples included project management, scientific communication and career exploration.'],
+  ['Weekly','Research reflections','Write about research progress, professional learning and challenges.']
+ ]
+};
+const fall2026 = {
+ tag:'FALL  /  RESEARCH CONTINUATION',
+ title:'4 hours per week: research, seminars and abstracts',
+ lead:'The 2026–27 student contract specified an average 4 hr/week for research and program activities, including required fall seminar time.',
+ items:[
+  ['Part of 4 hr/week','Research continuation','Reconnect with research mentors, interpret summer results and continue appropriate project tasks.'],
+  ['Included in 4 hr','Fall REM seminar','Participate in required seminar activities, discussions and professional learning.'],
+  ['Submission planning','Abstract development','Develop a clear research abstract and prepare for conference submission as appropriate.'],
+  ['Ongoing','Mentor and coordinator contact','Review progress, maintain mentorship, and plan milestones around the academic calendar.']
+ ]
+};
+const spring2027 = {
+ tag:'SPRING  /  DISSEMINATION & TRANSITION',
+ title:'4 hours per week: research and presentation preparation',
+ lead:'The 2026–27 contract counted seminar time within an average 4 hr/week academic-year commitment; venue and meeting dates required confirmation.',
+ items:[
+  ['Part of 4 hr/week','Research and required spring seminar','Continue research, discuss progress and participate in academic-year learning activities.'],
+  ['Preparation','Poster and presentation development','Turn research into a poster or talk and adapt it to the chosen conference guidelines.'],
+  ['Practice','Feedback and communication','Rehearse presentations, revise visuals and explain results to different audiences.'],
+  ['Dissemination','Conference participation','Present work at the selected professional venue when approved and scheduled.'],
+  ['End of cycle','Reflection and next steps','Assess growth, document outcomes and plan continued research or training.']
+ ]
+};
+const placementActivities = {
+ tag:'RESEARCH PLACEMENT  /  DETAILED ACTIVITIES',
+ title:'What a placement can include at each stage',
+ lead:'Research Placement is adaptable; unlike the historical Full REM schedule, there is no universal weekly hour requirement for every host.',
+ items:[
+  ['Pre-placement','Project and mentor readiness','Confirm the project scope, skills needed, host mentor, student preferences, offers and expectations.'],
+  ['Arrival','Orientation and access','Arrange accounts, safety and equipment training, introductory reading, facilities and communication channels.'],
+  ['Weekly example','Research and mentoring','Work in the lab or on the project, meet mentors, document findings and identify barriers.'],
+  ['At agreed milestones','Share progress','Prepare brief updates, write-ups, presentations or other host-approved artifacts.'],
+  ['Wrap-up','Transfer and reflection','Review outputs with mentors, document lessons and agree on next steps.']
+ ]
+};
+
 const REM_SLIDES = {
- full:[{tag:'FULL PROGRAM',title:'From recruitment to research',lead:'An illustrative life cycle to help shape an REM cohort.',items:[['Plan','Recruit and select','Define projects, build applications and match mentors.'],['Prepare','Set up agreements','Review offers, onboarding and training.'],['Launch','Bootcamp and research','Coordinate schedules, check-ins and participant development.'],['Continue','Academic year','Work toward presentations and program assessment.']]},
-       {tag:'FULL PROGRAM',title:'Close the loop',lead:'Maintain continuity beyond the initial research experience.',items:[['Share','Research outputs','Use event-specific materials where appropriate.'],['Evaluate','Program evidence','Collect outcomes and identify needed improvements.'],['Improve','Next cycle','Use the change log and program debrief.']]}],
- summer:[{tag:'SUMMER PROGRAM',title:'A focused summer research journey',lead:'Illustrative flow; confirm dates with participating sites.',items:[['Before','Prepare people and projects','Confirm readiness, access and mentor responsibilities.'],['Week one','Launch bootcamp','Introduce the cohort, facilities and research expectations.'],['Mid-program','Support research','Run regular meetings, check-ins and workshops.'],['Close','Practice and reflect','Plan student presentations and storyboard reflection.']]},
-         {tag:'SUMMER PROGRAM',title:'Adapt it to your campus',lead:'Use the sample as a starting point, not a mandated schedule.',items:[['Timing','Set your dates','Replace historical dates with your site schedule.'],['People','Confirm mentor roles','Verify local support and approval paths.'],['Materials','Select essentials','Trim the package to your actual summer needs.']]}],
- placement:[{tag:'RESEARCH PLACEMENT',title:'A guided placement workflow',lead:'A flexible example for matching and onboarding.',items:[['Match','Prepare the research fit','Review projects, students and mentoring capacity.'],['Onboard','Agree on expectations','Coordinate agreements, access and roles.'],['Support','Track progress','Use regular research check-ins.'],['Wrap up','Reflect and document','Record lessons that improve future placements.']]},
-            {tag:'RESEARCH PLACEMENT',title:'Build your host-specific package',lead:'Choose only the resources appropriate to the placement.',items:[['Local','Match local requirements','Adapt permissions, dates and approvals.'],['Scope','Remove unneeded tools','Any preset can become a custom package.'],['Review','Check ZIP contents','Inspect exact file paths before downloading.']]}]
+  full:[
+    {tag:'FULL REM  /  PROGRAM AT A GLANCE',title:'From selection to sharing results',
+     lead:'The NewFoS 2026–27 example combined eight summer weeks (average 35 hr/week) with fall and spring (average 4 hr/week including seminar).',
+     items:[['Before summer','Recruit & match','Recruit students, review applications, match projects and prepare participants.'],
+            ['Summer · 8 weeks','Bootcamp & research','Begin with a shared five-day bootcamp, then move into mentored research.'],
+            ['Academic year','Continue mentoring','Stay in touch with project mentors and education coordinators.'],
+            ['Dissemination','Share research','Prepare a poster or presentation for an appropriate venue.']]},
+    preSummer2026, ...bootcampSlides, ...bootcampActivityDays, summerRhythm, summerLearning, summerFinish,
+    {tag:'ACADEMIC YEAR  /  CONTINUATION',title:'Keep mentoring and presentation prep going',
+     lead:'The 2026–2027 offer letter described continued mentoring and a conference poster or presentation. Set exact cadence and dates locally.',
+     items:[['After summer','Plan the handoff','Agree on next research or communication milestones and how to stay in touch.'],
+            ['During the year','Meet and develop','Continue regular mentor contact and coordinator support.'],
+            ['Presentation milestone','Share the work','Refine a poster or talk for the selected venue.']]},
+    fall2026, spring2027,
+  ],
+  summer:[
+    {tag:'SUMMER ONLY  /  PROGRAM AT A GLANCE',title:'Eight weeks of summer research',
+     lead:'The 2026 example averaged 35 hr/week across research and program activities, from bootcamp to lab work, development and a final showcase.',
+     items:[['Week 1','Start together','Five days of bootcamp and local host time.'],
+            ['Weeks 2–5','Build momentum','Lab work, check-ins and professional development.'],
+            ['Weeks 6–8','Prepare to share','Draft, practice and present research and StoryMap work.']]},
+    ...bootcampSlides, ...bootcampActivityDays, summerRhythm, summerLearning, summerFinish,
+  ],
+  placement:[
+    {tag:'RESEARCH PLACEMENT  /  ADAPTABLE PATH',title:'From a good match to a useful wrap-up',
+     lead:'This is an adaptable sequence based on NewFoS practices, not a fixed-duration placement calendar.',
+     items:[['Before start','Match & onboard','Agree on a project and mentor; arrange access and orientation.'],
+            ['During placement','Run mentored lab work','Schedule research blocks, regular check-ins and site-specific meetings.'],
+            ['At the end','Review & hand off','Discuss progress, document what was learned and agree on next steps.']]},
+    {tag:'RESEARCH PLACEMENT  /  CHECK-IN RHYTHM',title:'Choose a rhythm that fits the lab',
+     lead:'The summer example used weekly lab or team check-ins. Agree on timing, location and expectations with the host.',
+     items:[['Set locally','Lab work','Choose research blocks that fit the site and project.'],
+            ['Example: weekly','Mentor check-ins','Review work, clarify blockers and agree on next steps.'],
+            ['End of placement','Wrap-up','Review outputs and any follow-up work.']]},
+    placementActivities,
+  ],
 };
 /* Small ZIP writer for the offline preview. Stored entries, UTF-8 paths, no network. */
 function makePreviewZip(entries) {
